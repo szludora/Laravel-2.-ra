@@ -14,26 +14,29 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id('book_id');
-            $table->string('author',32);
-            $table->longText('title',150);
+            $table->string('author', 32);
+            $table->longText('title', 150);
             $table->integer('pieces')->default(50);
             $table->timestamps();
         });
-    
-        Book::create([
-            'author' => 'Ludányi Bettina', 
-            'title' => 'Thriller',
-            'pieces'=> 32]);
 
-            Book::create([
-                'author' => 'Baráth Viktória', 
-                'title' => 'Regény',
-                'pieces'=> 78]);
-                
-                Book::create([
-                    'author' => 'Borsa Brown', 
-                    'title' => 'Regény',
-                    'pieces'=> 102]);
+        Book::create([
+            'author' => 'Ludányi Bettina',
+            'title' => 'Thriller',
+            'pieces' => 32
+        ]);
+
+        Book::create([
+            'author' => 'Baráth Viktória',
+            'title' => 'Regény',
+            'pieces' => 78
+        ]);
+
+        Book::create([
+            'author' => 'Borsa Brown',
+            'title' => 'Regény',
+            'pieces' => 102
+        ]);
     }
 
     /**
